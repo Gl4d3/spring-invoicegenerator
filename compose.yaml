@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=kali'
+      - 'POSTGRES_PASSWORD=kali'
+      - 'POSTGRES_USER=myuser'
+    ports:
+      - '5432:5432'
