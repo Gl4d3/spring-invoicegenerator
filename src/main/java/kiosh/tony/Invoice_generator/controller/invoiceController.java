@@ -1,9 +1,7 @@
 package kiosh.tony.Invoice_generator.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-
-@Controller
+@RestController
+@RequestMapping("/api")
 public class invoiceController {
 
 //    Dependency injection
@@ -24,6 +22,7 @@ public class invoiceController {
         repository.save(record);
     }
 
+    @DeleteMapping("")
     public void deleteInvoice(invoiceRecord record) {
         repository.delete(record);
     }
